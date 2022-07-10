@@ -1,0 +1,40 @@
+{
+    "watchForFileChanges" : false,
+    "chromeWebSecurity": false ,
+    "defaultCommandTimeout" : 6000,
+    "env" : 
+    {
+        "db": {
+            "host": "127.0.0.1",
+            "user": "dcir",
+            "password": "dcir123",
+            "database": "dcir_db",
+            "port" : "3307"
+        },
+        "url" : "http://dcir.development.teamapt.com/login",
+        "validUsername" : "dcir_qa",
+        "validPassword" : "password1",
+        "deactivatedUsername" : "test@test.com",
+        "invalidUsername" : "dcir_qa1",
+        "invalidPassword" : "password",
+        "startDate" : "2022-06-01",
+        "endDate" : " ",
+        "rrn" : "007356",
+        "maskedPan" : "524289******3325",
+        "terminalId" : "703WDQ",
+        "bulkSettlementKey" : "220627090000ecb22206271735000008",
+        "fsParticipantName" : "Cypress Participant",
+        "nfsParticipantName": "Cypress Non fee Participant",
+        "participantDescription" : "This is an automated Test",
+        "accountNumber" : "9988776655",
+        "debitaccountNumber" : "5566778899",
+        "phoneNumber" : "81012345678",
+        "alternatePhoneNumber" : "07012345678",
+        "cypressEmail" : "cypressagent@test.com",
+        "cardAcceptorId" : "AUTOTEST1234567",
+        "logCode" : "MCK|20220623|3113",
+        "createdDateFrom" : "2022-06-01",
+        "createdDateTo" : " ",
+        "responseCode" : "00"
+    }
+}
