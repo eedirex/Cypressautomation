@@ -1,3 +1,3 @@
 #Testing
 
-Learning Github
+Learning Github from scratch
