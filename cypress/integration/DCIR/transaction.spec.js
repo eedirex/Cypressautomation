@@ -1,10 +1,11 @@
 /// <reference types = "cypress" />
 
+
 import { LoginPage } from "../../page-objects/dcir_loginpage"
 import { MainPage } from "../../page-objects/dcir_mainpage"
 import { TransactionPage } from "../../page-objects/dcir_transactionpage"
 
-describe('Transaction Filter Configuration', ()=> {
+/*describe('Transaction Filter Configuration', ()=> {
     
     const mainPage = new MainPage()
     const loginPage = new LoginPage()
@@ -150,5 +151,15 @@ describe('Transaction Filter Configuration', ()=> {
         cy
             .get(':nth-child(2) > :nth-child(6) > .dcir-column')
             .should('contain.text', '00')
+    })
+})*/
+
+describe('Transaction Insertions', ()=> {
+
+    it('Should add transactions to the DB', ()=> {
+        cy.task('queryDb', Cypress.env('insertionQuery')).then((result) => {
+            let data = result
+            console.log(data)
+        })
     })
 })
