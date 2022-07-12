@@ -20,8 +20,6 @@ describe('Dashboard functionalities', ()=> {
         var versionNumber = cy.get('a[class="nav-profile-title version underline p-mt-0"]').
         mainPage.navigateToChangeLog()
 
-        
 
-    
     })
 })

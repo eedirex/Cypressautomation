@@ -15,6 +15,11 @@ export class TransactionPage {
             .get('[aria-label="Fast Cash"]')
             .click()
     }
+    selectMoniepoint() {
+        cy
+            .get('[aria-label="Moniepoint"]')
+            .click()
+    }
     selectTransactionStatus () {
         cy
             .get(':nth-child(2) > :nth-child(1) > .p-dropdown > .p-dropdown-label')

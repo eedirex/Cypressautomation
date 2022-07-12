@@ -21,6 +21,7 @@
         "endDate" : " ",
         "rrn" : "007356",
         "maskedPan" : "524289******3325",
+        "dbMaskedPan" : "524289******2000",
         "terminalId" : "703WDQ",
         "bulkSettlementKey" : "220627090000ecb22206271735000008",
         "fsParticipantName" : "Cypress Participant",
@@ -33,9 +34,9 @@
         "cypressEmail" : "cypressagent@test.com",
         "cardAcceptorId" : "AUTOTEST1234567",
         "logCode" : "MCK|20220623|3113",
-        "createdDateFrom" : "2022-06-01",
+        "createdDateFrom" : "2022-07-01",
         "createdDateTo" : " ",
         "responseCode" : "00",
-        "insertionQuery" : "INSERT INTO dcir_db.backoffice_transaction_records (transaction_amount, terminal_id, masked_pan, rrn, stan, card_acceptor_id,  response_code, transaction_time,  transaction_search_key, aptent_id, request_time, hashed_pan, processing_code, card_acceptor_location, transaction_currency_code) VALUES ( '7150000', '203WDS', '524289******3325', '002357', '11', '2UBNLA234567897', '00', '2022-07-11 06:14:30', '75612', '0101', '2022-07-11 07:15:30', 'hjdhfhdfbuyeihd', '22265', 'Lagos', 'NGN')"
+        "insertionQuery" : "INSERT INTO dcir_db.backoffice_transaction_records (transaction_amount, terminal_id, masked_pan, rrn, stan, card_acceptor_id,  response_code, transaction_time,  transaction_search_key, aptent_id, request_time, hashed_pan, processing_code, card_acceptor_location, transaction_currency_code) VALUES ( '1000000', '203AUTO', '524289******2000', '002357', '11', '2UBNLA234567897', '00', '2022-07-12 06:14:30', '75613', '0101', '2022-07-12 06:15:30', 'hjdhfhdfbuyeihd', '22264', 'Lagos', 'NGN')"
     }
 }

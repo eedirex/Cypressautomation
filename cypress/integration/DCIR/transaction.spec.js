@@ -1,6 +1,7 @@
 /// <reference types = "cypress" />
 
 
+import { TrasnsactionAction } from "../../dcir-action/transactionaction"
 import { LoginPage } from "../../page-objects/dcir_loginpage"
 import { MainPage } from "../../page-objects/dcir_mainpage"
 import { TransactionPage } from "../../page-objects/dcir_transactionpage"
@@ -155,11 +156,32 @@ import { TransactionPage } from "../../page-objects/dcir_transactionpage"
 })*/
 
 describe('Transaction Insertions', ()=> {
-
+    
+    const mainPage = new MainPage()
+    const loginPage = new LoginPage()
+    const transactionPage = new TransactionPage()
+    const transactionAction = new TrasnsactionAction()
     it('Should add transactions to the DB', ()=> {
-        cy.task('queryDb', Cypress.env('insertionQuery')).then((result) => {
-            let data = result
-            console.log(data)
-        })
+        transactionAction.addtransaction()   
+    })
+    before(function (){
+        loginPage.navigate()
+        loginPage.enterUsername(Cypress.env('validUsername'))
+        loginPage.enterPassword(Cypress.env('validPassword'))
+        loginPage.submit()
+        mainPage.navigateToTransactions()
+    })
+
+    it('Should verify transaction added', ()=> {
+        transactionPage.selectFilter()
+        transactionPage.selectSuperAgent()
+        transactionPage.selectMoniepoint()
+        transactionPage.addMaskedPan(Cypress.env('dbMaskedPan'))
+        transactionPage.selectStartDate(Cypress.env('startDate'))
+        transactionPage.submitFilter()
+        cy
+            .get(':nth-child(2) > :nth-child(2) > .dcir-column > p')
+            .should("contain.text", Cypress.env('dbMaskedPan'))
+
     })
 })
