@@ -1,7 +1,7 @@
 /// <reference types = "cypress" />
 
-
 import { TrasnsactionAction } from "../../dcir-action/transactionaction"
+import { BulkSettlmentPage } from "../../page-objects/dcir_bulksettlement"
 import { LoginPage } from "../../page-objects/dcir_loginpage"
 import { MainPage } from "../../page-objects/dcir_mainpage"
 import { TransactionPage } from "../../page-objects/dcir_transactionpage"
@@ -161,18 +161,18 @@ describe('Transaction Insertions', ()=> {
     const loginPage = new LoginPage()
     const transactionPage = new TransactionPage()
     const transactionAction = new TrasnsactionAction()
+    const bulkSettlmentPage = new BulkSettlmentPage()
     it('Should add transactions to the DB', ()=> {
         transactionAction.addtransaction()   
     })
-    before(function (){
+
+    it('Should verify transaction added', ()=> {
+
         loginPage.navigate()
         loginPage.enterUsername(Cypress.env('validUsername'))
         loginPage.enterPassword(Cypress.env('validPassword'))
         loginPage.submit()
         mainPage.navigateToTransactions()
-    })
-
-    it('Should verify transaction added', ()=> {
         transactionPage.selectFilter()
         transactionPage.selectSuperAgent()
         transactionPage.selectMoniepoint()
@@ -182,6 +182,17 @@ describe('Transaction Insertions', ()=> {
         cy
             .get(':nth-child(2) > :nth-child(2) > .dcir-column > p')
             .should("contain.text", Cypress.env('dbMaskedPan'))
+        //get bulk settlement key for transaction
+    })
+
+    it('Should verfiy bulk settlement entry', ()=> {
+        loginPage.navigate()
+        loginPage.enterUsername(Cypress.env('validUsername'))
+        loginPage.enterPassword(Cypress.env('validPassword'))
+        loginPage.submit()
+        mainPage.navigateToBulkSettlements()
+        bulkSettlmentPage.selectFilter()
+        bulkSettlmentPage.addBulkSettlementKey(Cypress.env('bulkSettlementKey'))
 
     })
 })
