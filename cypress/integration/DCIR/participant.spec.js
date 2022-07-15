@@ -20,7 +20,7 @@ describe ('Participants Configurations', ()=> {
 
      })
 
-    /*it('Should add new fee sharing Participant', () => {
+    it('Should add new fee sharing Participant', () => {
         participantPage.addNewParticipant()
         participantPage.selectChargeTye()
         participantPage.addNewParticipantName(Cypress.env("fsParticipantName"))
@@ -122,7 +122,7 @@ describe ('Participants Configurations', ()=> {
         cy
             .get(':nth-child(2) > .p-col-7')
             .should('contain.text', 'Banks Charge')       
-     })*/
+     })
 
     it('Should verify participant tied to a super agent cannot be deleted', ()=> {
         
@@ -131,7 +131,7 @@ describe ('Participants Configurations', ()=> {
             .find('div[class="dcir-row table-body-text"]')
             .each(($el, index, $list) => {
                 const partText = $el.find('div[class="dcir-column"]').text()
-                if(partText.includes('Banks charge')){
+                if(partText.includes('Banks Charge')){
                     cy
                         .wrap($el)
                         .find('i[class="pi pi-trash"]')

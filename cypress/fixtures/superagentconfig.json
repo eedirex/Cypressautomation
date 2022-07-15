@@ -1,0 +1,11 @@
+{
+    "newName": "CypressAgent1",
+    "newName2": "CypressAgent2",
+    "newName3": "CypressAgent3",
+    "existingName" : "CypressAgent",
+    "newcardAcceptorId": "AUTOTEST1234568",
+    "cardAcceptorId" : "AUTOTEST1234567",
+    "cardAcceptorId1": "AUTOTEST2234567",
+    "cardAcceptorId2": "AUTOTEST2234567",
+    "cardAcceptorId3": "AUTOTEST2234567"
+}

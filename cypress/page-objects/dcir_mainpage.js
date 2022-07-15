@@ -16,7 +16,7 @@ export class MainPage {
 
     navigateToSuperAgent (){
         cy
-            .get(':nth-child(7) > .singleNavContainer > .p-grid > .p-col-10 > .singleNavContainer-text')
+            .get(':nth-child(6) > .singleNavContainer > .p-grid > .p-col-10')
             .click()
     }
 

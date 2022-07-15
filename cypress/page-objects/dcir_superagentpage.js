@@ -116,6 +116,16 @@ export class SuperAgentPage {
             .contains("Banks floating charge")
             .click()
     }
+    selectDcirFSParticipant () {
+        cy
+            .contains("Fee sharing Teamapt")
+            .click()
+    }
+    selectBankFSParticipant () {
+        cy
+            .contains("Fee Sharing Bank")
+            .click()
+    }
     submit () {
         cy
             .contains('Submit')
