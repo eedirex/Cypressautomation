@@ -58,7 +58,7 @@ describe('Bulk Settlement filter Configurations', ()=> {
         bulkSettlmentPage.submitFilter()
         cy
             .get('.table-body-text > :nth-child(3) > .dcir-column > p')
-            .should('contain.text', '₦300.00')
+            .should('contain.text', '₦200.00')
     })
 
     it('Should filter by Super Agent and Settlement Staus', ()=> {

@@ -44,7 +44,7 @@ export class MainPage {
 
     navigateToBulkSettlements (){
         cy
-            .get(':nth-child(11) > .singleNavContainer > .p-grid > .p-col-10')
+            .get(':nth-child(10) > .singleNavContainer > .p-grid > .p-col-10 > .singleNavContainer-text')
             .click()
     }
 
