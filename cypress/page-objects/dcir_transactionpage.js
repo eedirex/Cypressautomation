@@ -15,6 +15,11 @@ export class TransactionPage {
             .get('[aria-label="Fast Cash"]')
             .click()
     }
+    selectDebitNoValue () {
+        cy
+            .get('[aria-label="Debit No Value"]')
+            .click()
+    }
     selectMoniepoint() {
         cy
             .get('[aria-label="Moniepoint"]')
@@ -54,6 +59,31 @@ export class TransactionPage {
         cy
             .get('#terminalId')
             .type(termianlId)
+    }
+    viewTransactionDetails () {
+        cy
+            .get(':nth-child(2) > :nth-child(7) > .dcir-column > .mobile-table-icon > svg > path')
+            .click()
+    }
+    logDsipute () {
+        cy
+            .contains('Log Dispute')
+            .click()
+    }
+    selectDisputeReason () {
+        cy
+            .get('.p-dropdown-label')
+            .click()
+    }
+    submit () {
+        cy
+            .contains('Submit')
+            .click()
+    }
+    validateAccountName () {
+        cy
+            .get('#customerAccountName')
+            .should('have.value', 'Dcir Tester')
     }
 
 

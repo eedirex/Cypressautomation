@@ -50,7 +50,7 @@ export class MainPage {
 
     navigateToBackofficeDisputes (){
         cy
-            .get('#pr_id_2_header_0 > .p-accordion-toggle-icon')
+            .get('#pr_id_3_header_0 > .p-accordion-header-text > .d-fle > .custom-tab-text > p')
             .click()
         cy
             .get('[href="/back-office/disputes/backoffice"] > .custom-tab-content')

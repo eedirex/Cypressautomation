@@ -17,12 +17,13 @@
         "deactivatedUsername" : "test@test.com",
         "invalidUsername" : "dcir_qa1",
         "invalidPassword" : "password",
-        "startDate" : "2022-06-01",
+        "startDate" : "2022-07-01",
         "endDate" : " ",
         "rrn" : "007356",
         "maskedPan" : "524289******3325",
         "dbMaskedPan" : "524289******2000",
         "terminalId" : "703WDQ",
+        "disputeTerminalId": "203WDS",
         "bulkSettlementKey" : "220627090000ecb22206271735000008",
         "fsParticipantName" : "Cypress Participant",
         "nfsParticipantName": "Cypress Non fee Participant",
@@ -41,10 +42,10 @@
         "cardAcceptorId1": "AUTOTEST2234567",
         "cardAcceptorId2": "AUTOTEST2334567",
         "cardAcceptorId3": "AUTOTEST2434567",
-        "logCode" : "MCK|20220623|3113",
+        "logCode" : "MCK|20220714|1504",
         "createdDateFrom" : "2022-07-01",
         "createdDateTo" : " ",
         "responseCode" : "00",
-        "insertionQuery" : "INSERT INTO dcir_db.backoffice_transaction_records (transaction_amount, terminal_id, masked_pan, rrn, stan, card_acceptor_id,  response_code, transaction_time,  transaction_search_key, aptent_id, request_time, hashed_pan, processing_code, card_acceptor_location, transaction_currency_code) VALUES ( '1000000', '203AUTO', '524289******2000', '002357', '11', '2UBNLA234567897', '00', '2022-07-12 06:14:30', '75613', '0101', '2022-07-12 06:15:30', 'hjdhfhdfbuyeihd', '22264', 'Lagos', 'NGN')"
+        "insertionQuery" : "INSERT INTO dcir_db.backoffice_transaction_records (transaction_amount, terminal_id, masked_pan, rrn, stan, card_acceptor_id,  response_code, transaction_time,  transaction_search_key, aptent_id, request_time, hashed_pan, processing_code, card_acceptor_location, transaction_currency_code) VALUES ( '1000000', '203AUTO', '524289******2000', '002357', '11', '2UBNLA234567897', '00', '2022-07-16 08:17:30', '856155', '0101', '2022-07-16 08:18:30', 'hjdhfhdfbuyeihd', '222656', 'Lagos', 'NGN')"
     }
 }
