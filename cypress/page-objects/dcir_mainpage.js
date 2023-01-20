@@ -2,7 +2,8 @@ export class MainPage {
 
     navigateToChargeType (){
         cy
-            .get(':nth-child(3) > .singleNavContainer > .p-grid > .p-col-10').click()
+            .get('#charge-types')
+            .click()
     }
 
     navigateToTransactions (){
@@ -54,6 +55,15 @@ export class MainPage {
             .click()
         cy
             .get('[href="/back-office/disputes/backoffice"] > .custom-tab-content')
+            .click()
+    }
+
+    naviageteToWorkFlowRequest () {
+        cy
+            .get('#pr_id_4_header_0 > .p-accordion-header-text > .d-fle > .custom-tab-text')
+            .click()
+        cy
+            .get('#all-requests')
             .click()
     }
 

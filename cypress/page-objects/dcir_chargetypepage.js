@@ -1,8 +1,9 @@
 export class ChargeTypePage {
 
     addNewChargeType (){
-         cy.contains('New charge type')
-         .click()
+         cy
+            .contains('New charge type')
+            .click()
     }
 
     selectFlatChargeType (){

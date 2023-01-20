@@ -14,7 +14,7 @@ export class LoginPage {
 
     submit () {
         cy
-            .contains('Submit')
+            .contains('Sign in')
             .click()
     }
 
